@@ -16,7 +16,7 @@ std::vector<int> parseInput(std::string filename) {
     return depths;
 }
 
-int partOne(std::vector<int> depths) {
+int partOne(std::vector<int>& depths) {
     int increasing = 0;
     for (int i = 1; i < depths.size(); i++){
         increasing += depths[i] > depths[i-1];
@@ -24,7 +24,7 @@ int partOne(std::vector<int> depths) {
     return increasing;
 }
 
-int partTwo(std::vector<int> depths) {
+int partTwo(std::vector<int>& depths) {
     int increasing = 0;
     for (int i = 3; i < depths.size(); i++) {
         increasing += (depths[i] > depths[i - 3]);
